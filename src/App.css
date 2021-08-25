@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  background: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.link,
+.link:hover {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.link:hover {
+  color: #fff;
+}
+
+.link {
+  font-size: 18.5px;
+  color: #0d0033;
+  font-family: "El Messiri", sans-serif;
+}
+
+.navigation-link {
+  color: #33b5e5;
+}
+.navigation-link:hover {
+  color: #cc0000;
+}
+
+.page-header {
+  margin-top: 10%;
+}
+
+#logo-font {
+  background-clip: text;
+  background-image: linear-gradient(to right, #0099cc, #ff8c00, #ff0080);
+  -webkit-text-fill-color: transparent;
+  color: #ff0080;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-family: "Monoton", cursive;
+}
+
+.logout-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.logout-inner {
+  width: 450px;
+  margin: 10em auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logout-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 0;
+  color: #0099cc;
+  padding-bottom: 20px;
+  padding-top: 35px;
+}
+body {
+  background: rgb(14, 30, 37);
+  color: rgb(242, 242, 242);
+  font-family: "El Messiri", sans-serif;
+}
+#account-link a {
+  text-decoration: none;
+}
+.pagination > li > a {
+  background-color: #0099cc;
+  color: #000;
+  margin-top: 20px;
+  padding: 0.7em;
+}
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+  color: #fff;
+  background-color: #cc0000;
+  border-color: #ddd;
 }

@@ -1,11 +1,21 @@
 import React from "react";
 
-const Logout = () => {
+const Logout = ({ setToken }) => {
+  try {
+    const response = fetch("http://localhost:2018/auth/logout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    });
+    // console.log(response);
+    setToken(response);
+  } catch (err) {
+    console.log(err.message);
+  }
+
   return (
     <div className="logout-wrapper">
       <div className="logout-inner">
-        {sessionStorage.clear()}
-        <h3>You have been logged out!</h3>
+        <h3>You have successfully logged out!</h3>
       </div>
     </div>
   );

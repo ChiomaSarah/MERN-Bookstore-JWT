@@ -11,11 +11,13 @@ const Pagination = ({booksPerPage, totalBooks, paginate}) => {
         <div>
         <nav  aria-label="Page navigation">
          <ul className="pagination  justify-content-center">
-             {pageNumbers.map(number =>(
-                 
-                 <li key={number} className="page-item"> <a onClick={()=>paginate(number)}  href="#books"  className="page-link">{number}</a>                    
+         <h5 className="mt-4 mr-4 pt-2">Pages:</h5> 
+          {pageNumbers.map(number =>(
+                
+                 <li key={number} className="page-item"><a onClick={()=>paginate(number)}  href="#books"  className="page-link">{number}</a>                    
                      
                  </li>
+                 
              ))}
              </ul>   
 

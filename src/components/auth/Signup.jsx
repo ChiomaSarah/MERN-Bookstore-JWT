@@ -48,32 +48,31 @@ const Signup = ({ setToken }) => {
   }
 
   return (
-    <div className="container py-5 h-100">
-      <div className="row d-flex justify-content-center align-items-center h-100">
-        <div className="col col-xl-7">
-          <div className="card" style={{ borderRadius: "1rem", width: "600px" }}>
-            <div className="row g-0">
-              <div className="col-md-6 col-lg-5 d-none d-md-block">
-                <img
-                  src="https://i.ibb.co/cbQmdBm/Book-Logo.png"
-                  alt="login form"
-                  className="img-fluid"
-                  style={{ borderRadius: "1rem 0 0 1rem", height: "90vh" }}
-                />
-              </div>
-              <div className="col-md-6 col-lg-7 d-flex align-items-center">
-                <div className="card-body p-4 p-lg-5 text-black">
-                  <form onSubmit={handleSubmit}>
-                    <div className=" text-warning mb-3" style={{ fontSize: "14px" }}>
-                      {error}
-                    </div>
-                    <div className="d-flex align-items-center mb-3 pb-1">
-                      <span className="h2 mb-0" id="logo-font-color" style={{ fontFamily: "Monoton, cursive" }}
-                      >BOOK STORE</span>
-                    </div>
+    <>
+    <div className="container py-5 h-80">
+        <div className="row d-flex justify-content-center align-items-center h-100">
+          <div className="col col-xl-7">
+            <div className="card">
+              <div className="row g-0">
+                <div className="col-md-6 col-lg-5 " id="img-box">
+                  <img
+                    src="https://i.ibb.co/cbQmdBm/Book-Logo.png"
+                    alt="login form"
+                    className="img-fluid"
+                    style={{ borderRadius: "1rem 0 0 1rem", height: "69.7vh" }}
+                  />
+                </div>
+                <div className="col-md-6 col-lg-7 d-flex align-items-center">
+                  <div className="card-body p-4 p-lg-5 text-black" >
+                    <form onSubmit={handleSubmit}>
+                      <div className="mb-3" style={{ fontSize: "14px", color:"#ff8c00" }}>
+                        {error}
+                      </div>
+                      <div className="d-flex align-items-center mb-3 pb-1" >
+                        <span className="h3 mb-0" id="form-logo-font">BOOK STORE</span>
+                      </div>
 
-                    <h5 className="fw-normal mb-3 pb-3" style={{ letterSpacing: "1px" }}>Create an account
-                    </h5>
+                      <h5 className="fw-normal mb-1 pb-3" style={{ letterSpacing: "1px", color: "#0d0c22" }}>Create your account</h5>
 
                     <div className="form-group">
                       <input
@@ -115,9 +114,9 @@ const Signup = ({ setToken }) => {
                       >Sign Up</button>
                     </div>
 
-                    <p className="mb-5 pb-lg-2" id="account-link" style={{ color: "#393f81" }}>
+                    <p className="mb-5 pb-sm-2" id="redirection-link" >
                       Already have an account?{" "}
-                      <a href="/auth/login" style={{ color: "#393f81" }}><b>Login here</b></a>
+                      <a href="/auth/login" ><b>Login here</b></a>
                     </p>
                   </form>
                 </div>
@@ -127,6 +126,7 @@ const Signup = ({ setToken }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

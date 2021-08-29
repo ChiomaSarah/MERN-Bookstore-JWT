@@ -14,7 +14,7 @@ function Books() {
   const [searchQuery, setSearchQuery] = useState("");
   let [error, setError] = useState("");
 
-  // fetch all books from the database
+  // fetch all books from the deployed API
   useEffect(() => {
     async function getBooks() {
       try {
@@ -61,7 +61,7 @@ function Books() {
     error = { setError };
   }
 
-  // if page is loading, display a spinning wheel... else, render the fetched books from the database
+  // if page is loading, display a spinning wheel... else, render the fetched books from the API
   if (loading) {
     return <Spinner />;
   }
@@ -75,13 +75,13 @@ function Books() {
           {/* create a search bar to find a book */}
           <input
             type="text"
-            placeholder="search book..."
+            placeholder="search books..."
             className="form-control mt-5 mb-5 float-right"
-            style={{ width: "20%" }}
+            id="search"
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           {/* create a dynamic table */}{" "}
-          <table className="table table-bordered mt-5 ">
+          <table className="table table-bordered mt-5 container" >
             <thead className="thead-dark">
               <tr>
                 <th scope="col">ID</th>
@@ -117,13 +117,13 @@ function Books() {
                 })
                 .map((book) => (
                   <tr key={book._id}>
-                    <td>{book._id}</td>
-                    <td>{book.book_title}</td>
-                    <td>{book.book_author}</td>
-                    <td>{book.book_rating}</td>
-                    <td>{book.book_genre}</td>
-                    <td>{book.book_publication_date}</td>
-                    <td>
+                    <td data-label="Id:">{book._id}</td>
+                    <td data-label="Title:">{book.book_title}</td>
+                    <td data-label="Author:">{book.book_author}</td>
+                    <td data-label="Rating:">{book.book_rating}</td>
+                    <td data-label="Genre:">{book.book_genre}</td>
+                    <td data-label="Publication Date:">{book.book_publication_date}</td>
+                    <td data-label="Action:">
                       <div className="btn-group">
                         <UpdateBook book={book} />
                         <DeleteBook book={book} />

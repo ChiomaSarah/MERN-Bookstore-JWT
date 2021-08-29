@@ -15,7 +15,7 @@ const Logout = ({ setToken }) => {
   return (
     <div className="logout-wrapper">
       <div className="logout-inner">
-        <h3>You have successfully logged out!</h3>
+        <h3>Au revoir!</h3>
       </div>
     </div>
   );

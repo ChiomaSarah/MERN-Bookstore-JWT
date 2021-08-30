@@ -69,7 +69,7 @@ function AddBook() {
   return (
     <div className="container">
       <div className=" text-warning mb-3 mt-5 pb-3 text-center"style={{ fontSize: "14px" }}>{error}</div>
-      <h3 className="text-center mb-5 page-header">Add a Book</h3>
+      <h3 className="text-center mb-5 ">Add a Book</h3>
       <form onSubmit={onSubmitForm}>
         <div className="form-group">
           <input onChange={handleChange} className="form-control" name="book_title"nvalue={book.book_title} type="text" placeholder="Book Title" required/>

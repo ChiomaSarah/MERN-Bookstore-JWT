@@ -19,15 +19,15 @@
   font-family: "El Messiri", sans-serif;
 }
 
-.navigation-link {
+.home-navigation-link {
   color: #33b5e5;
 }
-.navigation-link:hover {
-  color: #cc0000;
+.home-navigation-link:hover {
+  color: #ffffff;
 }
 
 .page-header {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 #logo-font,
@@ -107,7 +107,7 @@ body {
   color: #393f81;
   text-decoration: none;
 }
-#search {
+#search, #add-book {
   border-radius: 0.7rem;
   width: 17%;
   text-align: center;

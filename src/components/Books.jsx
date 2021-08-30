@@ -4,6 +4,8 @@ import DeleteBook from "./DeleteBook";
 import Spinner from "./ui/Spinner";
 import Pagination from "./Pagination";
 import useToken from "../useToken";
+import { Link } from 'react-router-dom';
+
 
 function Books() {
   const { token } = useToken();
@@ -14,7 +16,7 @@ function Books() {
   const [searchQuery, setSearchQuery] = useState("");
   let [error, setError] = useState("");
 
-  // fetch all books from the deployed API
+  // fetch all books from the database
   useEffect(() => {
     async function getBooks() {
       try {
@@ -41,6 +43,7 @@ function Books() {
         if (!response.ok) {
           throw Error(result.error);
         }
+        
       } catch (err) {
         setError(err.message);
       }
@@ -61,7 +64,7 @@ function Books() {
     error = { setError };
   }
 
-  // if page is loading, display a spinning wheel... else, render the fetched books from the API
+  // if page is loading, display a spinning wheel... else, render the fetched books from the database
   if (loading) {
     return <Spinner />;
   }
@@ -71,6 +74,12 @@ function Books() {
       <div className="text-warning mb-3 mt-5 text-center"style={{ fontSize: "14px" }}>{error}</div>
       <div className="container text-center mt-5 mb-5">
         <h3>Books</h3>
+        
+        <div  >
+        <button className="btn btn-md float-left mt-5 bg-light" id="add-book" style={{ background: "#ddd" }} ><Link to="/add-book" className="link fw-bold text-primary">Add Book</Link></button>
+          </div>
+        
+
         <div>
           {/* create a search bar to find a book */}
           <input

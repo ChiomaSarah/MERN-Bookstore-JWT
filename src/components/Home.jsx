@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
       <div className="container text-center">
-        <h3 className=" page-header">Hello there! Welcome to Chioma's bookstore!</h3>
+        <h3 className=" page-header">Hello there! Welcome to My bookstore!</h3>
         
         <h5 className="mt-5">Find your way:</h5>
         <ul className="mt-4">

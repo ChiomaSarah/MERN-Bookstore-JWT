@@ -22,10 +22,10 @@ function Books() {
       try {
         setLoading(true);
         const response = await fetch(
-          "https://mysterious-hamlet-48690.herokuapp.com/https://mongodb-bookstore-api.herokuapp.com/books",
+          "https://bookstore-api-mongodb.onrender.com/books",
           
           {
-            method: "get",
+            method: "GET",
             headers: {
               Accept: "application/json, text/plain, */*",
               "Content-Type": "application/json",

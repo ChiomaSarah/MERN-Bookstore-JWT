@@ -19,7 +19,7 @@ const Signup = ({ setToken }) => {
       };
 
       const response = await fetch(
-        "https://mysterious-hamlet-48690.herokuapp.com/https://mongodb-bookstore-api.herokuapp.com/auth/signup",
+        "https://bookstore-api-mongodb.onrender.com/auth/signup",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

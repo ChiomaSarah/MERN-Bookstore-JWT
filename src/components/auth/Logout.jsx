@@ -2,7 +2,7 @@ import React from "react";
 
 const Logout = ({ setToken }) => {
   try {
-    const response = fetch("http://localhost:2018/auth/logout", {
+    const response = fetch("https://bookstore-api-mongodb.onrender.com/auth/logout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     });

@@ -10,7 +10,7 @@ function DeleteBook({ book }) {
 
 async function deleteBook(id) {
     try {
-     await fetch(`https://mysterious-hamlet-48690.herokuapp.com/https://mongodb-bookstore-api.herokuapp.com/books/${id}`, {
+     await fetch(`https://bookstore-api-mongodb.onrender.com/books/${id}`, {
         method: 'DELETE',
         headers: {
             'Accept': 'application/json, text/plain, */*',

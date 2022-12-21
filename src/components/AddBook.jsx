@@ -37,7 +37,7 @@ function AddBook() {
       };
 
       const response = await fetch(
-        "https://mysterious-hamlet-48690.herokuapp.com/https://mongodb-bookstore-api.herokuapp.com/books",
+        "https://bookstore-api-mongodb.onrender.com/books",
         {
           method: "POST",
           headers: {

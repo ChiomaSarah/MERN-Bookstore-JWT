@@ -27,7 +27,7 @@ function UpdateBook({ book }) {
       };
 
        
-      await fetch(`https://mysterious-hamlet-48690.herokuapp.com/https://mongodb-bookstore-api.herokuapp.com/books/${book._id}`, {
+      await fetch(`https://bookstore-api-mongodb.onrender.com/books/${book._id}`, {
         method: 'PATCH',
         headers: {
             'Accept': 'application/json, text/plain, */*',

@@ -4,8 +4,7 @@ import DeleteBook from "./DeleteBook";
 import Spinner from "./ui/Spinner";
 import Pagination from "./Pagination";
 import useToken from "../useToken";
-import { Link } from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 function Books() {
   const { token } = useToken();
@@ -22,8 +21,8 @@ function Books() {
       try {
         setLoading(true);
         const response = await fetch(
-          "https://bookstore-api-mongodb.onrender.com/books",
-          
+          "https://mongodb-bookstore-api.cyclic.app/books",
+
           {
             method: "GET",
             headers: {
@@ -43,7 +42,6 @@ function Books() {
         if (!response.ok) {
           throw Error(result.error);
         }
-        
       } catch (err) {
         setError(err.message);
       }
@@ -71,14 +69,25 @@ function Books() {
 
   return (
     <div>
-      <div className="text-warning mb-3 mt-5 text-center"style={{ fontSize: "14px" }}>{error}</div>
+      <div
+        className="text-warning mb-3 mt-5 text-center"
+        style={{ fontSize: "14px" }}
+      >
+        {error}
+      </div>
       <div className="container text-center mt-5 mb-5">
         <h3>Books</h3>
-        
-        <div  >
-        <button className="btn btn-md float-left mt-5 bg-light" id="add-book" style={{ background: "#ddd" }} ><Link to="/add-book" className="link fw-bold text-primary">Add Book</Link></button>
-          </div>
-        
+
+        <div>
+          <h2>
+            <Link
+              to="/add-book"
+              className="nav-link fw-bold text-info float-left mt-5"
+            >
+              Add Book
+            </Link>
+          </h2>
+        </div>
 
         <div>
           {/* create a search bar to find a book */}
@@ -90,7 +99,7 @@ function Books() {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           {/* create a dynamic table */}{" "}
-          <table className="table table-bordered mt-5 container" >
+          <table className="table table-bordered mt-5 container">
             <thead className="thead-dark">
               <tr>
                 <th scope="col">ID</th>
@@ -107,7 +116,8 @@ function Books() {
                 .filter((val) => {
                   if (searchQuery === " ") {
                     return val;
-                  }if (
+                  }
+                  if (
                     val.book_title
                       .toLowerCase()
                       .includes(searchQuery.toLowerCase()) ||
@@ -131,7 +141,9 @@ function Books() {
                     <td data-label="Author:">{book.book_author}</td>
                     <td data-label="Rating:">{book.book_rating}</td>
                     <td data-label="Genre:">{book.book_genre}</td>
-                    <td data-label="Publication Date:">{book.book_publication_date}</td>
+                    <td data-label="Publication Date:">
+                      {book.book_publication_date}
+                    </td>
                     <td data-label="Action:">
                       <div className="btn-group">
                         <UpdateBook book={book} />

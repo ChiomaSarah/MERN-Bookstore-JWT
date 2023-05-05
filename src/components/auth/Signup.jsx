@@ -19,7 +19,7 @@ const Signup = ({ setToken }) => {
       };
 
       const response = await fetch(
-        "https://bookstore-api-mongodb.onrender.com/auth/signup",
+        "https://mongodb-bookstore-api.cyclic.app/auth/signup",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -49,7 +49,7 @@ const Signup = ({ setToken }) => {
 
   return (
     <>
-    <div className="container py-5 h-80">
+      <div className="container py-5 h-80">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col col-xl-7">
             <div className="card">
@@ -63,69 +63,86 @@ const Signup = ({ setToken }) => {
                   />
                 </div>
                 <div className="col-md-6 col-lg-7 d-flex align-items-center">
-                  <div className="card-body p-4 p-lg-5 text-black" >
+                  <div className="card-body p-4 p-lg-5 text-black">
                     <form onSubmit={handleSubmit}>
-                      <div className="mb-3" style={{ fontSize: "14px", color:"#ff8c00" }}>
+                      <div
+                        className="mb-3"
+                        style={{ fontSize: "14px", color: "#ff8c00" }}
+                      >
                         {error}
                       </div>
-                      <div className="d-flex align-items-center mb-3 pb-1" >
-                        <span className="h3 mb-0" id="form-logo-font">BOOK STORE</span>
+                      <div className="d-flex align-items-center mb-3 pb-1">
+                        <span className="h3 mb-0" id="form-logo-font">
+                          BOOK STORE
+                        </span>
                       </div>
 
-                      <h5 className="fw-normal mb-1 pb-3" style={{ letterSpacing: "1px", color: "#0d0c22" }}>Create your account</h5>
+                      <h5
+                        className="fw-normal mb-1 pb-3"
+                        style={{ letterSpacing: "1px", color: "#0d0c22" }}
+                      >
+                        Create your account
+                      </h5>
 
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        className="form-control form-control-md"
-                        name="username"
-                        value={username}
-                        placeholder="Username"
-                        required
-                        onChange={(e) => setUsername(e.target.value)}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        className="form-control form-control-md"
-                        name="email"
-                        value={email}
-                        placeholder="Email Address"
-                        required
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </div>
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          className="form-control form-control-md"
+                          name="username"
+                          value={username}
+                          placeholder="Username"
+                          required
+                          onChange={(e) => setUsername(e.target.value)}
+                        />
+                      </div>
+                      <div className="form-group">
+                        <input
+                          type="email"
+                          className="form-control form-control-md"
+                          name="email"
+                          value={email}
+                          placeholder="Email Address"
+                          required
+                          onChange={(e) => setEmail(e.target.value)}
+                        />
+                      </div>
 
-                    <div className="form-group">
-                      <input
-                        type="password"
-                        className="form-control form-control-md"
-                        name="password"
-                        value={password}
-                        placeholder="Password"
-                        required
-                        onChange={(e) => setPassword(e.target.value)}
-                      />
-                    </div>
+                      <div className="form-group">
+                        <input
+                          type="password"
+                          className="form-control form-control-md"
+                          name="password"
+                          value={password}
+                          placeholder="Password"
+                          required
+                          onChange={(e) => setPassword(e.target.value)}
+                        />
+                      </div>
 
-                    <div className="pt-1 mb-4">
-                      <button className="btn btn-lg btn-block text-white" style={{ backgroundColor: "#0d0c22" }} type="submit"
-                      >Sign Up</button>
-                    </div>
+                      <div className="pt-1 mb-4">
+                        <button
+                          className="btn btn-lg btn-block text-white"
+                          style={{ backgroundColor: "#0d0c22" }}
+                          type="submit"
+                        >
+                          Sign Up
+                        </button>
+                      </div>
 
-                    <p className="mb-5 pb-sm-2" id="redirection-link" >
-                      Already have an account?{" "}
-                      <a href="/auth/login" ><b>Login here</b></a>
-                    </p>
-                  </form>
+                      <p className="mb-5 pb-sm-2" id="redirection-link">
+                        Already have an account?{" "}
+                        <a href="/auth/login">
+                          <b>Login here</b>
+                        </a>
+                      </p>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </>
   );
 };

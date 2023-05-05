@@ -1,18 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <>
       <div className="container text-center">
-        <h3 className=" page-header">Hello there! Welcome to My bookstore!</h3>
-        
-        <h5 className="mt-5">Find your way:</h5>
-        <ul className="mt-4">
-          <h6><i className="fas fa-hand-point-right mr-3"></i>
-            <Link to="/books" className="link home-navigation-link mr-4">Books</Link>
-          </h6>
-        </ul>
+        <h2 className=" my-5">Hello there! Welcome to My bookstore!</h2>
+
+        <h5 className="mt-5">
+          Kindly navigate using the links at the top right corner.
+        </h5>
+
+        <p className="mt-5">
+          Create an account or login (if you already have an account) to get
+          started.
+        </p>
       </div>
     </>
   );

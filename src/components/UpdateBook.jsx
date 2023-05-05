@@ -27,15 +27,18 @@ function UpdateBook({ book }) {
       };
 
        
-      await fetch(`https://bookstore-api-mongodb.onrender.com/books/${book._id}`, {
-        method: 'PATCH',
-        headers: {
-            'Accept': 'application/json, text/plain, */*',
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify(body),
-      })
+      await fetch(
+        `https://mongodb-bookstore-api.cyclic.app/books/${book._id}`,
+        {
+          method: "PATCH",
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(body),
+        }
+      );
       alert("Success: Book Updated!");
       window.location = "/books";
     } catch (err) {

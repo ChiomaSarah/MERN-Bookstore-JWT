@@ -18,7 +18,7 @@ const Login = ({ setToken }) => {
       };
 
       const response = await fetch(
-        "https://bookstore-api-mongodb.onrender.com/auth/login",
+        "https://mongodb-bookstore-api.cyclic.app/auth/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -50,10 +50,10 @@ const Login = ({ setToken }) => {
 
   return (
     <>
-       <div className="container py-5 h-80">
+      <div className="container py-5 h-80">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col col-xl-7">
-            <div className="card" >
+            <div className="card">
               <div className="row g-0">
                 <div className="col-md-6 col-lg-5 " id="img-box">
                   <img
@@ -64,16 +64,26 @@ const Login = ({ setToken }) => {
                   />
                 </div>
                 <div className="col-md-6 col-lg-7 d-flex align-items-center">
-                  <div className="card-body p-4 p-lg-5 text-black" >
+                  <div className="card-body p-4 p-lg-5 text-black">
                     <form onSubmit={handleSubmit}>
-                      <div className="mb-3" style={{ fontSize: "14px", color:"#ff8c00" }}>
+                      <div
+                        className="mb-3"
+                        style={{ fontSize: "14px", color: "#ff8c00" }}
+                      >
                         {error}
                       </div>
-                      <div className="d-flex align-items-center mb-3 pb-1" >
-                        <span className="h3 mb-0" id="form-logo-font">BOOK STORE</span>
+                      <div className="d-flex align-items-center mb-3 pb-1">
+                        <span className="h3 mb-0" id="form-logo-font">
+                          BOOK STORE
+                        </span>
                       </div>
 
-                      <h5 className="fw-normal mb-1 pb-3" style={{ letterSpacing: "1px", color: "#0d0c22" }}>Log into your account</h5>
+                      <h5
+                        className="fw-normal mb-1 pb-3"
+                        style={{ letterSpacing: "1px", color: "#0d0c22" }}
+                      >
+                        Log into your account
+                      </h5>
 
                       <div className="form-group">
                         <input
@@ -96,12 +106,20 @@ const Login = ({ setToken }) => {
                       </div>
 
                       <div className="pt-1 mb-4">
-                        <button className="btn btn-lg btn-block text-white" style={{backgroundColor: "#0d0c22"}} type="submit">Login</button>
+                        <button
+                          className="btn btn-lg btn-block text-white"
+                          style={{ backgroundColor: "#0d0c22" }}
+                          type="submit"
+                        >
+                          Login
+                        </button>
                       </div>
 
-                      <p className="mb-5 pb-sm-2" id="redirection-link" >
+                      <p className="mb-5 pb-sm-2" id="redirection-link">
                         Don't have an account?{" "}
-                        <a href="/auth/signup" ><b>Sign Up here</b></a>
+                        <a href="/auth/signup">
+                          <b>Sign Up here</b>
+                        </a>
                       </p>
                     </form>
                   </div>

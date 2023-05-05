@@ -2,10 +2,13 @@ import React from "react";
 
 const Logout = ({ setToken }) => {
   try {
-    const response = fetch("https://bookstore-api-mongodb.onrender.com/auth/logout", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-    });
+    const response = fetch(
+      "https://mongodb-bookstore-api.cyclic.app/auth/logout",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      }
+    );
     // console.log(response);
     setToken(response);
   } catch (err) {
@@ -15,7 +18,7 @@ const Logout = ({ setToken }) => {
   return (
     <div className="logout-wrapper">
       <div className="logout-inner">
-        <h3>Au revoir!</h3>
+        <h5>Au revoir!</h5>
       </div>
     </div>
   );
